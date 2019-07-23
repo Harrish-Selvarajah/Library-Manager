@@ -1,0 +1,71 @@
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <h1> Westminster Library Manager</h1>
+  <button  class="btn" id="logout" (click)="logoutclick()"><i class="fa fa-close"></i> Logout</button>
+  <!-- type refers to the button, class is the bootstrap class, id to to call the method for routing, (click) for routing -->
+  <button class="btn" id="menu" (click)="menuclick()"><i class="fa fa-home"></i> Menu</button>
+  
+ 
+
+<div class="container">
+  <h1>Add Book Form</h1>
+  <!-- Form starts here -->
+  <form (ngSubmit)="add(bookform)" #bookform="ngForm">
+      <!-- (ngSubmit) is to connect the add button to the form   -->
+      <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input  required minlength="5" ngModel name="isbn" #isbn="ngModel" (change)="log(isbn)" id="isbn" type="number" class="form-control" id="isbn"  name="isbn" > <!-- #isbn="ngmodel" template varialble to the isbn input control -->
+        <div class="alert alert-danger" *ngIf="isbn.touched && !isbn.valid"> 
+            <div *ngIf="isbn.errors.required"> <!-- NgIf is used to only display the content of this element if the assigned expression string is valid.  -->
+                ISBN is required
+            </div>
+            <div *ngIf="isbn.errors.minlength">
+                ISBN should be {{ isbn.errors.minlength.requiredLength }} numbers <!-- To check for the lenght of the ISBN number -->
+            </div>
+        </div>
+              
+      </div>
+      <div class="form-group">
+          <label for="title">Title</label>
+          <input required ngModel name="title" #title="ngModel" (change)="log(title)" id="title" type="text" class="form-control"  >
+          <!-- #title="ngmodel" template varialble to the title input control -->
+          <div 
+          class="alert alert-danger" *ngIf="title.touched && !title.valid">Title is required</div> 
+      </div>
+      <div class="form-group">
+          <label for="sector">Sector</label>
+          <input required ngModel name="sector" #sector="ngModel" (change)="log(sector)" id="sector" type="text" class="form-control"  name="sector"> <!-- #sector="ngmodel" template varialble to the sector input control -->
+          <div class="alert alert-danger" *ngIf="sector.touched && !sector.valid">Sector is required </div>
+      </div>
+      <div class="form-group">
+          <label for="publidate">Publication Date</label>
+          <input required ngModel name="publidate" #publidate="ngModel" (change)="log(publidate)" id="publidate" type="date" class="form-control" name="publidate"> <!-- #publidate="ngmodel" template varialble to the publidate input control -->
+          <div class="alert alert-danger" *ngIf="publidate.touched && !publidate.valid">Publication Date is required </div>
+      </div>
+      <div class="form-group">
+          <label for="author">Author</label>
+          <input required ngModel name="author" #author="ngModel" (change)="log(author)" id="author" type="text" class="form-control" name="author"> <!-- #author="ngmodel" template varialble to the author input control -->
+          <div class="alert alert-danger" *ngIf="author.touched && !author.valid">Auhtor is required </div>
+      </div>
+      <div class="form-group">
+          <label for="publisher">Publisher</label>
+          <input required ngModel name="publisher" #publisher="ngModel" (change)="log(publisher)" id="publisher" type="text" class="form-control" name="publisher"> <!-- #publisher="ngmodel" template varialble to the publisher input control -->
+          <div class="alert alert-danger" *ngIf="publisher.touched && !publisher.valid">Publisher is required </div>
+      </div>
+      <div class="form-group">
+          <label for="noofpages">No of Pages</label>
+          <input required ngModel name="noofpages" #noofpages="ngModel" (change)="log(noofpages)" id="noofpages" type="number" class="form-control" name="noofpages"> <!-- #noofpages="ngmodel" template varialble to the noofpages input control -->
+          <div class="alert alert-danger" *ngIf="noofpages.touched && !noofpages.valid">Number Of Pages is required </div>
+      </div>
+      <button type="submit" [disabled]="!bookform.form.valid" class="btn btn-primary" >Add</button>
+      <!--  the add button only enables if the form is in valid state.  -->
+    </form>
+    <!-- from ends here -->
+
+    <h2>Model:</h2>
+    <div *ngFor="let book of books">
+     ISBN: {{ book.isbn }}, Title:{{book.title}}, Sector:{{book.sector}}, Publication Date:{{book.publidate}}, Author:{{book.author}}, Publisher:{{book.publisher}}, No of Pages:{{book.noofpages}} 
+    
+
+    </div>
+</div>

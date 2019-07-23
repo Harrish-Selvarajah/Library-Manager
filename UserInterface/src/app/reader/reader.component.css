@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-bottom: 2px solid #eee;
+  }
+  
+  #logout{
+    float: right;
+    position: relative;
+    top: -50px;
+  }
+  
+  #menu{
+    float: left;
+    position: relative;
+    top: -50px;
+  }
+  .ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948; /* this gives the green bar indicating input is rite */
+  }
+  
+  .ng-invalid:not(form) {
+      border-left: 5px solid #a94442; /* this gives the red bar indicating input is wrong */
+  }  

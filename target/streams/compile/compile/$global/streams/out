@@ -1,0 +1,5 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\harrish\Desktop\play courseork\play-java-seed\conf\routes:19:1: value Dbook is not a member of controllers.HomeController[0m
+[0m[[0m[31merror[0m] [0m[0mDELETE  /bookd/:isbn                 controllers.HomeController.Dbook(isbn:String)[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\harrish\Desktop\play courseork\play-java-seed\conf\routes:20:1: value Ddvd is not a member of controllers.HomeController[0m
+[0m[[0m[31merror[0m] [0m[0mDELETE  /dvdd/:dvdid                controllers.HomeController.Ddvd(dvdid:String)[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

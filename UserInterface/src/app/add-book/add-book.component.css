@@ -1,0 +1,42 @@
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948; /* this gives the green bar indicating input is right */
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #a94442; /* this gives the red bar indicating input is wrong */
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  border-bottom: 2px solid #eee;
+}
+
+#logout{
+  float: right;
+  position: relative;
+  top: -50px;
+  left: -30px;
+}
+
+#menu{
+  float: left;
+  position: relative;
+  top: -50px;
+  right: -30px;
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}

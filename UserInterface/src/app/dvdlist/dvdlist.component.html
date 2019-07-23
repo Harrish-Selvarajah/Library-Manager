@@ -1,0 +1,30 @@
+<h1> Westminster Library Manager</h1>
+<button type="button" class="btn btn-secondary" id="logout" (click)="logoutclick()">Logout</button>
+<button type="button" class="btn btn-secondary" id="menu" (click)="menuclick()">Menu</button>
+
+
+
+    <div>  
+        <button type="button" class="btn btn-outline-primary" id="booksee" (click)="booksee()">Book</button>
+        <button type="button" class="btn btn-outline-primary" id="dvdsee" (click)="dvdsee()">Dvd</button>
+    </div>  
+
+    <div class="container"
+    *ngFor="let dvd of dvds">
+    <h4>DVD Id:{{dvd.dvdid}}</h4>  
+    <h4>Title:{{dvd.titled}}</h4>
+    <h4>sector:{{dvd.sector}}</h4>
+    <h4>Available Languages:{{dvd.availang}}</h4>
+    <h4>Subtitles:{{dvd.sub}}</h4>
+    <h4>Producer:{{dvd.producer}}</h4>
+    <h4>Actors:{{dvd.actors}}</h4>
+    
+
+
+    <button type="button" class="btn btn-primary" id="bt" (click)="borrowclick()">BORROW</button>
+    <br/>
+    <button type="button" class="btn btn-primary" id="bt" (click)="reserveclick()">RESERVE</button>
+    <br/>
+    <button type="button" class="btn btn-primary" id="bt" (click)="removeclcik()">REMOVE</button>
+ 
+   </div>

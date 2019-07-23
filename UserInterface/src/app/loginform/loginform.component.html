@@ -1,0 +1,27 @@
+<div class="container-fluid bg">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <!--form strats here-->
+          <form class="form-container" (submit)="loginUser($event)">
+            <h1>WestMinster Library Manager</h1>
+            <div class="form-group">
+              <label for="username">User Name</label>
+              <input type="username" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember Me
+              </label>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Login</button>
+          </form>
+         <!---from ends here-->
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12"></div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+h1{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-bottom: 2px solid #eee;
+  }
+  
+  /* .ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948; /* this gives the green bar indicating input is rite */
+   */
+  
+  /* .ng-invalid:not(form) {
+      border-left: 5px solid #a94442; /* this gives the red bar indicating input is wrong */
+   */
+
+  #logout{
+    float: right;
+    position: relative;
+    top: -50px;
+    left: -30px;
+  }
+  
+  #menu{
+    float: left;
+    position: relative;
+    top: -50px;
+    right: -30px;
+  }
+  
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+
+  .container{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: blueviolet;
+    background-size: cover; 
+
+  }
+
+  .box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgb(0, 0,0);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0,.5);
+    border-radius: 10px;
+  }

@@ -1,0 +1,34 @@
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <h1> Westminster Library Manager</h1>
+  <button  class="btn" id="logout" (click)="logoutclick()"><i class="fa fa-close"></i>Logout</button>
+  <!-- type refers to the button, class is the bootstrap class, id to to call the method for routing, (click) for routing -->
+  <button class="btn" id="menu" (click)="menuclick()"><i class="fa fa-home"></i>Menu</button>
+
+
+
+    <div>  
+        <button type="button" class="btn btn-outline-primary" id="booksee" (click)="booksee()">Book</button>
+        <button type="button" class="btn btn-outline-primary" id="dvdsee" (click)="dvdsee()">Dvd</button>
+    </div>  
+        <div class="container"
+             *ngFor="let book of books">
+             <h4>ISBN:{{book.isbn}}</h4>  
+             <h4>Title:{{book.title}}</h4>
+             <h4>sector:{{book.sector}}</h4>
+             <h4>Publication Date:{{book.publidate}}</h4>
+             <h4>Author:{{book.author.Name}}</h4>
+             <h4>Publisher:{{book.publisher.Name}}</h4>
+             
+
+
+             <button type="button" class="btn btn-primary" id="bt" (click)="borrowclick()">BORROW</button>
+             <br/>
+             <button type="button" class="btn btn-primary" id="bt" (click)="reserveclick()">RESERVE</button>
+             <br/>
+             <button type="button" class="btn btn-primary" id="bt" (click)="removeclick()">REMOVE</button>
+          
+            </div>
+        
+     
+    

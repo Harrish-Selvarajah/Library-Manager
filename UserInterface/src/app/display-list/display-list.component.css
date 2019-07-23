@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-bottom: 2px solid #eee;
+  }
+  
+  #logout{
+    float: right;
+    position: relative;
+    top: -50px;
+  }
+  
+  #menu{
+    float: left;
+    position: relative;
+    top: -50px;
+  }
+  
+  /* .search-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+  } */
+
+  #bt{
+    position: relative;
+    left: 700px;
+    bottom: 150px;
+    width: 100px;
+    margin: 4px 2px;
+  }
+
+  #dvdsee{
+    position: relative;
+    width: 200px;
+    left: 500px;
+    top: 0px;
+  }
+
+  #booksee{
+    position: relative;
+    width: 200px;
+    left: 500px;
+  }
